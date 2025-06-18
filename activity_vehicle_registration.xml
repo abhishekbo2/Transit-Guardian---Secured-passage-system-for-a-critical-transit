@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Skip Button -->
+        <TextView
+            android:id="@+id/skipButton"
+            android:layout_width="70dp"
+            android:layout_height="32dp"
+            android:layout_gravity="end"
+            android:text="Skip"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:padding="0dp"
+            android:background="@drawable/skip_button_background"
+            android:gravity="center" />
+
+        <!-- Ambulance Image -->
+        <ImageView
+            android:id="@+id/ambulanceImage"
+            android:layout_width="350dp"
+            android:layout_height="210dp"
+            android:layout_marginTop="0dp"
+            android:contentDescription="Ambulance Image"
+            android:src="@drawable/ambulance" />
+
+    </LinearLayout>
+
+        <!-- Title -->
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:text="Register Your Vehicle"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:gravity="center" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Vehicle Owner Name"
+        android:layout_marginTop="30dp"
+        android:padding="0dp"
+        android:layout_marginHorizontal="24dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ownerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+<!--       <!- Input Fields &ndash;&gt;-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Vehicle Number"
+        android:layout_marginTop="8dp"
+        android:padding="0dp"
+        android:layout_marginHorizontal="24dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/vehicleNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:inputType="textCapCharacters" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Vehicle RC Number"
+        android:layout_marginTop="8dp"
+        android:padding="0dp"
+        android:layout_marginHorizontal="24dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/vehicleRCNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:inputType="textCapCharacters" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:backgroundTint="#FF5252"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+    <!-- Note -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:text="NOTE: Please enter the details properly."
+        android:textColor="#262525"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

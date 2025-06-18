@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile_page">
+
+    <!-- Profile Header Section -->
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="Profile Image"
+        android:src="@drawable/component"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/circle_background"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/editProfileImageIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="7dp"
+        android:src="@drawable/editline"
+        android:background="@drawable/circle_background"
+        android:layout_gravity="end"
+        app:layout_constraintEnd_toEndOf="@id/profileImage"
+        app:layout_constraintBottom_toBottomOf="@id/profileImage"
+        android:layout_margin="0dp" />
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Naruto Uzumaki"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/profileImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/profileDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="youremail@domain.com | +01 09876 54321"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        app:layout_constraintTop_toBottomOf="@id/profileName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="0dp" />
+
+    <!-- Options List -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginHorizontal="0dp"
+        android:layout_marginTop="16sp"
+        android:layout_marginBottom="0dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/profileDetails"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="636dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="636dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/firstsec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="8dp">
+
+                        <!-- Edit Profile -->
+                        <TextView
+                            android:id="@+id/editprofileOption"
+                            style="@style/OptionText"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:drawableStart="@drawable/profileline"
+                            android:drawablePadding="8dp"
+                            android:padding="9dp"
+                            android:text="Edit Profile"
+                            android:textSize="16sp" />
+
+                        <!-- Notification -->
+                        <TextView
+                            android:id="@+id/notificationOption"
+                            style="@style/OptionText"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:drawableStart="@drawable/notilogo"
+                            android:drawablePadding="8dp"
+                            android:padding="9dp"
+                            android:text="Notifications"
+                            android:textSize="16sp" />
+
+                        <!-- Language -->
+                        <TextView
+                            android:id="@+id/languageOption"
+                            style="@style/OptionText"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:drawableStart="@drawable/translate"
+                            android:drawablePadding="8dp"
+                            android:padding="9dp"
+                            android:text="Language"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/secondsec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="8dp"                        app:layout_constraintTop_toBottomOf="@id/firstsec"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        >
+                        <!-- Vehicle Details -->
+                        <TextView
+                            android:id="@+id/vehicleDetailsOption"
+                            style="@style/OptionText"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:padding="9dp"
+                            android:textSize="16sp"
+                            android:drawableStart="@drawable/vehice"
+                            android:drawablePadding="8dp"
+                            android:text="Vehicle Details" />
+
+                        <!-- Theme -->
+                        <TextView
+                            android:id="@+id/themeOption"
+                            style="@style/OptionText"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:padding="9dp"
+                            android:textSize="16sp"
+                            android:drawableStart="@drawable/mentalhealthline"
+                            android:drawablePadding="8dp"
+                            android:text="Theme" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/thirdsec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="8dp"                        app:layout_constraintTop_toBottomOf="@id/secondsec"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        >
+                        <!-- Help & Support -->
+                        <TextView
+                            android:id="@+id/helpSupportOption"
+                            style="@style/OptionText"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:padding="9dp"
+                            android:textSize="16sp"
+                            android:drawableStart="@drawable/contactsline"
+                            android:drawablePadding="8dp"
+                            android:text="Help and Support" />
+
+                        <!-- Contact Us -->
+                        <TextView
+                            android:id="@+id/contactUsOption"
+                            style="@style/OptionText"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:padding="9dp"
+                            android:textSize="16sp"
+                            android:drawableStart="@drawable/chatquoteline"
+                            android:drawablePadding="8dp"
+                            android:text="Contact Us" />
+
+
+                        <!-- Privacy Policy -->
+                        <TextView
+                            android:id="@+id/privacyPolicyOption"
+                            style="@style/OptionText"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:padding="9dp"
+                            android:textSize="16sp"
+                            android:drawableStart="@drawable/darklock"
+                            android:drawablePadding="8dp"
+                            android:text="Privacy Policy" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Bottom Navigation Bar -->
+                <LinearLayout
+                    android:id="@+id/bottom_navigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:elevation="8dp"
+                    android:padding="10dp"
+                    android:paddingBottom="40dp"
+                    android:weightSum="3"
+                    android:layout_marginTop="90dp"
+                    tools:ignore="MissingConstraints"
+                    app:layout_constraintTop_toBottomOf="@id/ivEmergencyButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/home_button"
+                        android:layout_marginTop="50dp"
+                        android:layout_weight="1"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/homeicon"
+                        android:contentDescription="@string/home_icon" />
+
+                    <!-- Call Icon -->
+                    <ImageView
+                        android:id="@+id/call_button"
+                        android:layout_weight="1"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/groupss"
+                        android:contentDescription="@string/call_icon" />
+
+                    <!-- Profile Icon -->
+                    <ImageView
+                        android:id="@+id/profile_button"
+                        android:layout_weight="1"
+                        android:layout_width="55dp"
+                        android:layout_marginTop="55dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/proicon"
+                        android:contentDescription="@string/profile_icon" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
